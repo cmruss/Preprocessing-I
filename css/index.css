@@ -130,12 +130,19 @@ table {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dosis/v14/HhyJU5sn9vOmLxNkIwRSjTVNWLEJN7Ml2xMB.ttf) format('truetype');
+}
 html,
 body {
   height: 100%;
   max-width: 100%;
   font-size: 62.5%;
-  font-family: 'Bitter', serif;
+  font-family: 'Dosis', sans-serif;
 }
 p,
 li {
