@@ -139,14 +139,16 @@ table {
 }
 html,
 body {
-  height: 100%;
-  max-width: 100%;
   font-size: 62.5%;
   font-family: 'Dosis', sans-serif;
+}
+body {
+  width: 100vw;
 }
 p,
 li {
   font-size: 2rem;
+  margin: 2%;
 }
 th,
 td {
@@ -160,9 +162,16 @@ h4 {
   margin: 5% 0;
 }
 nav {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin: 2%;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  nav {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 nav a {
   margin: 0 2%;
@@ -176,6 +185,12 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 500px) {
+  header {
+    flex-direction: column-reverse;
+    margin: 10% auto;
+  }
+}
 header .profile {
   text-align: center;
 }
@@ -184,6 +199,10 @@ header .profile .profile-img {
 }
 header .bio {
   margin: 0 0 0 5%;
+}
+header .bio address {
+  margin: 20% auto;
+  font-size: 2rem;
 }
 header .bio h1 {
   font-size: 4rem;
@@ -197,19 +216,29 @@ header .bio .contact {
 }
 .about {
   width: 85%;
-  margin: 5% 5%;
+  margin: 5% auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
-.about .listen {
-  width: 42.5%;
+@media (max-width: 500px) {
+  .about {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10% auto;
+  }
 }
-.about .listen h2 {
+@media (max-width: 500px) {
+  .about div {
+    margin: 10% auto;
+  }
+}
+.about div h2 {
   font-size: 3.2rem;
 }
 .about .strengths {
-  width: 42.5%;
+  border: 1px solid black;
+  padding: 2%;
 }
 .about .strengths ul {
   margin: 5% 0 0 5%;
@@ -217,12 +246,19 @@ header .bio .contact {
 .experience {
   width: 85%;
   margin: 5% 5%;
+  display: flex;
+  flex-wrap: wrap;
 }
-.experience .work-history {
-  margin: 3%;
-  border-collapse: separate;
-  border-spacing: 30px 15px;
+.experience div {
+  margin: 5% auto;
   border: 1px solid black;
+  padding: 2%;
+}
+.experience div h5 {
+  font-size: 2rem;
+}
+.experience div p {
+  margin: 2%;
 }
 footer {
   padding: 5% 0;
