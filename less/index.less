@@ -52,8 +52,161 @@ table {
 * {
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+@maincolor: cadetblue;
+@accentcolor: antiquewhite;
+
+.border(){
+	border: 1px solid black;
+	padding: 2%;
+}
+
+.space-between(){
+	display: flex;
+	justify-content: space-between;
+  }
 
 html, body {
-    height: 100%;
+	font-size: 62.5%;
+	font-family: 'Dosis', sans-serif;
+}
+
+body{
+	width: 100vw;
+}
+
+p, li{
+	font-size: 2rem;
+	margin: 2%;
+}
+th, td{
+	font-size: 1.6rem;
+}
+h3,h4{
+	font-size: 2.4rem;
+}
+
+.statement{
+	margin: 5% 0;
+}
+
+nav{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding: 2%;
+
+	@media (max-width: 500px) {
+		width: 95%;
+		margin: 0 auto;
+	}//this closes nav media query
+
+	a{
+		margin: 0 2%;
+		text-decoration: none;
+		font-size: 2rem;
+	}//this closes a
+}//this closes nav
+
+header{
+	width: 85%;
+	margin: 10% 5%;
+	.space-between();
+	align-items: center;
+
+	@media(max-width: 500px) {
+		flex-direction: column-reverse;
+		margin: 10% auto;
+	}//this closes media query
+
+	.profile{
+		text-align: center;
+	
+		.profile-img{
+		width: 100%;
+	
+		}//this closes profile-img
+	}//this closes profile
+	.bio{
+		margin: 0 0 0 5%;
+		
+		address{
+			margin: 20% auto;
+			font-size: 2rem;
+		}
+
+		h1{
+			font-size: 4rem;
+	
+		}//this closes h1
+		.contact{
+			margin: 2% 0;
+			font-size: 2.4rem;
+			background: @maincolor;
+			color: @accentcolor;
+			border-radius: 2px;
+		}//this closes contact
+	}//this closes the bio
+	
+
+
+} //this closes the header
+
+.about{
+	width: 85%;
+	margin: 5% auto;
+	.space-between();
+	align-items: flex-start;
+
+	@media(max-width: 500px) {
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin: 10% auto;
+	}//this closes about media query
+	div {
+		@media(max-width: 500px) {
+			margin: 10% auto;
+		}//this closes div
+		h2{
+			font-size: 3.2rem;
+		} //this closes h2
+	}//this closes listen
+
+	.strengths{
+		.border();
+
+		ul{
+			margin: 5% 0 0 5%;
+		}//this closes ul
+	}//thiss closes strengths
+
+} //this closes about
+
+.experience{
+	width: 85%;
+	margin: 5% 5%;
+	display: flex;
+	flex-wrap: wrap;
+	
+	div{
+		margin: 5% auto;
+		.border();
+
+		h5{
+			font-size: 2rem;
+		}
+
+		p{
+			margin: 2%;
+		}
+	}
+}//this closes experience
+
+footer{	padding: 5% 0;
+	width: 85%;
+	margin: 0 5%;
+	background-color: @maincolor;
+	text-align: center;
+	color: @accentcolor;
 }
 
